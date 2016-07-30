@@ -38,6 +38,8 @@ nmap to :tabnew<CR>
 nmap tc :tabclose<CR>
 nmap tn :tabnext<CR>
 nmap fl :e .<CR>
+nmap td :TaskList<CR>
+nmap tl :TlistOpen<CR>
 map <C-Left> <C-w><Left>
 map <C-Right> <C-w><Right>
 map <C-Up> <C-w><Up>
@@ -63,8 +65,8 @@ set cursorline              " 突出显示当前行
 set tabstop=4
 set syntax=on
 set autoindent
-autocmd FileType python setlocal et sta sw=4 sts=4
-"set smartindent
+autocmd FileType python setlocal et sta sw=2 sts=2
+set smartindent
 set showmatch
 " 历史记录数
 set history=1000
@@ -104,4 +106,10 @@ set scrolloff=3
 set tags=tags;
 "set autochdir
 
-
+"""""""""""""""
+" Tag list (ctags)
+"""""""""""""""
+let Tlist_Ctags_Cmd = 'ctags'
+let Tlist_Show_One_File = 1            "不同时显示多个文件的tag，只显示当前文件的
+"let Tlist_Use_Right_Window = 1         "在右侧窗口中显示taglist窗口.
+""""""""""""""""""""""""""""""
