@@ -1,50 +1,50 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" æ˜¾ç¤ºç›¸å…³
+" ÏÔÊ¾Ïà¹Ø  
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
-set nu              " æ˜¾ç¤ºè¡Œå·
-set go=             " ä¸è¦å›¾å½¢æŒ‰é’®
-syntax on           " è¯­æ³•é«˜äº®
-autocmd InsertLeave * se nocul  " ç”¨æµ…è‰²é«˜äº®å½“å‰è¡Œ
-autocmd InsertEnter * se cul    " ç”¨æµ…è‰²é«˜äº®å½“å‰è¡Œ
-set ruler           " æ˜¾ç¤ºæ ‡å°º
-set showcmd         " è¾“å…¥çš„å‘½ä»¤æ˜¾ç¤ºå‡ºæ¥ï¼Œçœ‹çš„æ¸…æ¥šäº›
-set scrolloff=3     " å…‰æ ‡ç§»åŠ¨åˆ°bufferçš„é¡¶éƒ¨å’Œåº•éƒ¨æ—¶ä¿æŒ3è¡Œè·ç¦»
-set novisualbell    " ä¸è¦é—ªçƒ(ä¸æ˜ç™½)
-set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}   "çŠ¶æ€è¡Œæ˜¾ç¤ºçš„å†…å®¹
-set laststatus=1    " å¯åŠ¨æ˜¾ç¤ºçŠ¶æ€è¡Œ(1),æ€»æ˜¯æ˜¾ç¤ºçŠ¶æ€è¡Œ(2)
-set foldenable      " å…è®¸æŠ˜å 
-set foldmethod=manual   " æ‰‹åŠ¨æŠ˜å 
-set background=dark "èƒŒæ™¯ä½¿ç”¨é»‘è‰²
+set nu              " ÏÔÊ¾ĞĞºÅ  
+set go=             " ²»ÒªÍ¼ĞÎ°´Å¥  
+syntax on           " Óï·¨¸ßÁÁ  
+autocmd InsertLeave * se nocul  " ÓÃÇ³É«¸ßÁÁµ±Ç°ĞĞ  
+autocmd InsertEnter * se cul    " ÓÃÇ³É«¸ßÁÁµ±Ç°ĞĞ  
+set ruler           " ÏÔÊ¾±ê³ß  
+set showcmd         " ÊäÈëµÄÃüÁîÏÔÊ¾³öÀ´£¬¿´µÄÇå³şĞ©  
+set scrolloff=3     " ¹â±êÒÆ¶¯µ½bufferµÄ¶¥²¿ºÍµ×²¿Ê±±£³Ö3ĞĞ¾àÀë  
+set novisualbell    " ²»ÒªÉÁË¸(²»Ã÷°×)  
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")}   "×´Ì¬ĞĞÏÔÊ¾µÄÄÚÈİ  
+set laststatus=1    " Æô¶¯ÏÔÊ¾×´Ì¬ĞĞ(1),×ÜÊÇÏÔÊ¾×´Ì¬ĞĞ(2)  
+set foldenable      " ÔÊĞíÕÛµş  
+set foldmethod=manual   " ÊÖ¶¯ÕÛµş  
+set background=dark "±³¾°Ê¹ÓÃºÚÉ« 
 set fileformats=unix,dos
-" è®¾ç½®é…è‰²æ–¹æ¡ˆ
+set cursorcolumn
+" ÉèÖÃÅäÉ«·½°¸
 "colorscheme murphy
-"å­—ä½“
-"if (has("gui_running"))
-"   set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
-"endif
+"×ÖÌå 
+"if (has("gui_running")) 
+"   set guifont=Bitstream\ Vera\ Sans\ Mono\ 10 
+"endif 
 set fencs=utf-8,ucs-bom,shift-jis,gb18030,gbk,gb2312,cp936
 set termencoding=utf-8
 set enc=utf-8
 set fileencodings=ucs-bom,utf-8,cp936
 set fileencoding=utf-8
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"é”®ç›˜å‘½ä»¤
+"¼üÅÌÃüÁî
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap ss :w!<cr>
 nmap qq :q!<cr>
 map <C-c> <Esc>bvey
-nmap to :tabnew<CR>
+nmap to :tabnew<CR>  
 nmap tc :tabclose<CR>
 nmap tn :tabnext<CR>
-nmap fl :e .<CR>
-nmap td :TaskList<CR>
-nmap tl :TlistOpen<CR>
+nmap fl :e .<CR>  
+nmap tl :TlistOpen<CR>  
 map <C-Left> <C-w><Left>
 map <C-Right> <C-w><Right>
 map <C-Up> <C-w><Up>
 map <C-Down> <C-w><Down>
-map <C-g> <Esc>:vimgrep /\<<C-R><C-W>\>/  ./**/*.cpp  ./**/*.h  \| cw<cr>
+map <C-g> <Esc>:vimgrep /\<<C-R><C-W>\>/  ./**/*.cpp  ./**/*.h ./**/*.txt  \| cw<cr>
 map <F2> <Esc>:bp<cr>
 map <F3> <Esc>:bn<cr>
 map <F4> <Esc>:cp<cr>
@@ -52,10 +52,10 @@ map <F5> <Esc>:cn<cr>
 nmap <F7> <C-]>
 nmap <F6> <C-t>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""å®ç”¨è®¾ç½®
+""ÊµÓÃÉèÖÃ
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set ruler                   " æ‰“å¼€çŠ¶æ€æ æ ‡å°º
-set cursorline              " çªå‡ºæ˜¾ç¤ºå½“å‰è¡Œ
+set ruler                   " ´ò¿ª×´Ì¬À¸±ê³ß
+set cursorline              " Í»³öÏÔÊ¾µ±Ç°ĞĞ
 :inoremap () ()<Left>
 :inoremap {} {}<Left><CR><CR><Up><Tab>
 :inoremap [] []<Left>
@@ -65,51 +65,45 @@ set cursorline              " çªå‡ºæ˜¾ç¤ºå½“å‰è¡Œ
 set tabstop=4
 set syntax=on
 set autoindent
-autocmd FileType python setlocal et sta sw=2 sts=2
-set smartindent
+autocmd FileType python setlocal et sta sw=4 sts=4
+autocmd FileType c,cpp,h,hpp setlocal et sta sw=4 sts=4
+setlocal et sta sw=4 sts=4
+"set smartindent
 set showmatch
-" å†å²è®°å½•æ•°
+" ÀúÊ·¼ÇÂ¼Êı
 set history=1000
-"æœç´¢å¿½ç•¥å¤§å°å†™
+"ËÑË÷ºöÂÔ´óĞ¡Ğ´
 set ignorecase
-"æœç´¢é€å­—ç¬¦é«˜äº®
+"ËÑË÷Öğ×Ö·û¸ßÁÁ
 set hlsearch
 set incsearch
-"è¡Œå†…æ›¿æ¢
+"ĞĞÄÚÌæ»»
 set gdefault
-" æ€»æ˜¯æ˜¾ç¤ºçŠ¶æ€è¡Œ
+" ×ÜÊÇÏÔÊ¾×´Ì¬ĞĞ
 set laststatus=2
-" å‘½ä»¤è¡Œï¼ˆåœ¨çŠ¶æ€è¡Œä¸‹ï¼‰çš„é«˜åº¦ï¼Œé»˜è®¤ä¸º1ï¼Œè¿™é‡Œæ˜¯2
+" ÃüÁîĞĞ£¨ÔÚ×´Ì¬ĞĞÏÂ£©µÄ¸ß¶È£¬Ä¬ÈÏÎª1£¬ÕâÀïÊÇ2
 set cmdheight=2
-" ä¾¦æµ‹æ–‡ä»¶ç±»å‹
+" Õì²âÎÄ¼şÀàĞÍ
 filetype on
-" å¸¦æœ‰å¦‚ä¸‹ç¬¦å·çš„å•è¯ä¸è¦è¢«æ¢è¡Œåˆ†å‰²
+" ´øÓĞÈçÏÂ·ûºÅµÄµ¥´Ê²»Òª±»»»ĞĞ·Ö¸î
 set iskeyword+=_,$,@,%,#,-
-" å­—ç¬¦é—´æ’å…¥çš„åƒç´ è¡Œæ•°ç›®
+" ×Ö·û¼ä²åÈëµÄÏñËØĞĞÊıÄ¿
 set linespace=0
-" å¢å¼ºæ¨¡å¼ä¸­çš„å‘½ä»¤è¡Œè‡ªåŠ¨å®Œæˆæ“ä½œ
+" ÔöÇ¿Ä£Ê½ÖĞµÄÃüÁîĞĞ×Ô¶¯Íê³É²Ù×÷
 set wildmenu
-" ä½¿å›æ ¼é”®ï¼ˆbackspaceï¼‰æ­£å¸¸å¤„ç†indent, eol, startç­‰
+" Ê¹»Ø¸ñ¼ü£¨backspace£©Õı³£´¦Àíindent, eol, startµÈ
 set backspace=2
-" é€šè¿‡ä½¿ç”¨: commandså‘½ä»¤ï¼Œå‘Šè¯‰æˆ‘ä»¬æ–‡ä»¶çš„å“ªä¸€è¡Œè¢«æ”¹å˜è¿‡
+" Í¨¹ıÊ¹ÓÃ: commandsÃüÁî£¬¸æËßÎÒÃÇÎÄ¼şµÄÄÄÒ»ĞĞ±»¸Ä±ä¹ı
 set report=0
-" åœ¨è¢«åˆ†å‰²çš„çª—å£é—´æ˜¾ç¤ºç©ºç™½ï¼Œä¾¿äºé˜…è¯»
+" ÔÚ±»·Ö¸îµÄ´°¿Ú¼äÏÔÊ¾¿Õ°×£¬±ãÓÚÔÄ¶Á
 set fillchars=vert:\ ,stl:\ ,stlnc:\
-" é«˜äº®æ˜¾ç¤ºåŒ¹é…çš„æ‹¬å·
+" ¸ßÁÁÏÔÊ¾Æ¥ÅäµÄÀ¨ºÅ
 set showmatch
-" åŒ¹é…æ‹¬å·é«˜äº®çš„æ—¶é—´ï¼ˆå•ä½æ˜¯ååˆ†ä¹‹ä¸€ç§’ï¼‰
+" Æ¥ÅäÀ¨ºÅ¸ßÁÁµÄÊ±¼ä£¨µ¥Î»ÊÇÊ®·ÖÖ®Ò»Ãë£©
 set matchtime=1
-" å…‰æ ‡ç§»åŠ¨åˆ°bufferçš„é¡¶éƒ¨å’Œåº•éƒ¨æ—¶ä¿æŒ3è¡Œè·ç¦»
+" ¹â±êÒÆ¶¯µ½bufferµÄ¶¥²¿ºÍµ×²¿Ê±±£³Ö3ĞĞ¾àÀë
 set scrolloff=3
 
 "ctags
 set tags=tags;
 "set autochdir
-
-"""""""""""""""
-" Tag list (ctags)
-"""""""""""""""
-let Tlist_Ctags_Cmd = 'ctags'
-let Tlist_Show_One_File = 1            "ä¸åŒæ—¶æ˜¾ç¤ºå¤šä¸ªæ–‡ä»¶çš„tagï¼Œåªæ˜¾ç¤ºå½“å‰æ–‡ä»¶çš„
-"let Tlist_Use_Right_Window = 1         "åœ¨å³ä¾§çª—å£ä¸­æ˜¾ç¤ºtaglistçª—å£.
-""""""""""""""""""""""""""""""
