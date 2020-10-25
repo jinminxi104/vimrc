@@ -40,11 +40,11 @@ nmap tc :tabclose<CR>
 nmap tn :tabnext<CR>
 nmap fl :e .<CR>  
 nmap tl :TlistOpen<CR>  
-map <C-Left> <C-w><Left>
-map <C-Right> <C-w><Right>
-map <C-Up> <C-w><Up>
-map <C-Down> <C-w><Down>
-map <C-g> <Esc>:vimgrep /\<<C-R><C-W>\>/  ./**/*.cpp  ./**/*.h ./**/*.txt  \| cw<cr>
+nmap gl <C-w><Left>
+nmap gr <C-w><Right>
+nmap gu <C-w><Up>
+nmap gd <C-w><Down>
+nmap dg <Esc>:vimgrep /\<<C-R><C-W>\>/  ./**/*.cpp  ./**/*.h ./**/*.txt  \| cw<cr>
 map <F2> <Esc>:bp<cr>
 map <F3> <Esc>:bn<cr>
 map <F4> <Esc>:cp<cr>
