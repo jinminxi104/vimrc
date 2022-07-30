@@ -27,7 +27,7 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 "map ot to open NERDTree
 nnoremap tt :NERDTreeToggle<CR>
 nnoremap tf :NERDTreeFind<cr>
-nnoremap fnt :NERDTreeFocus<cr>
+nnoremap ft :NERDTreeFocus<cr>
 nnoremap bm :Bookmark<cr>
 let NERDTreeShowBookmarks=1
 "close vim if the only window left open is a NERDTree
@@ -98,8 +98,8 @@ nnoremap <F3> <Esc>:bn<cr>
 nnoremap <F4> <Esc>:cp<cr>
 nnoremap <F5> <Esc>:cn<cr>
 nnoremap <F7> <C-]>
-nnoremap <F6> <C-t>
-nnoremap gb <C-t>
+nnoremap <F6> <C-o>
+nnoremap gb <C-o>
 inoremap () ()<Left>
 inoremap {} {}<Left><CR><CR><Up><Tab>
 inoremap [] []<Left>
@@ -110,7 +110,7 @@ inoremap <tab> <space><space><space><space>
 function! s:on_lsp_buffer_enabled() abort
     setlocal omnifunc=lsp#complete
     setlocal signcolumn=yes
-    if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
+    " if exists('+tagfunc') | setlocal tagfunc=lsp#tagfunc | endif
     nnoremap edc :LspPeekDeclaration<cr>
     nnoremap edf :LspPeekDefinition<cr>
     nnoremap eim :LspPeekImplementation<cr>
@@ -119,6 +119,7 @@ function! s:on_lsp_buffer_enabled() abort
     nnoremap gdf :LspDefinition<cr>
     nnoremap gim :LspImplementation<cr>
     nnoremap gtd :LspTypeDefinition<cr>
+    nnoremap gre :LspReference<cr>
     nnoremap <nowait> hov :LspHover<cr>
     let g:lsp_format_sync_timeout = 1000
     autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
